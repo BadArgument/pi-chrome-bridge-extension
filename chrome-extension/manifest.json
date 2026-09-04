@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Pi Browser Bridge",
+  "version": "0.1.0",
+  "description": "Bridge Pi browser_* tools to Chrome tabs through a local WebSocket.",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "sw.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Pi Browser Bridge",
+    "default_popup": "options.html"
+  }
+}

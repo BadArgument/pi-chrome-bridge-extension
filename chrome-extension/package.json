@@ -1,0 +1,8 @@
+{
+  "name": "pi-browser-bridge-chrome-extension",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ../scripts/build-chrome.mjs"
+  }
+}
