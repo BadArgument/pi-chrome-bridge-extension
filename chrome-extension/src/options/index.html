@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pi Browser Bridge</title>
+    <style>
+      body { font-family: sans-serif; margin: 16px; line-height: 1.5; }
+      label { display: block; margin: 8px 0; }
+      input { width: 100%; max-width: 520px; }
+      code { background: #f4f4f4; padding: 2px 4px; }
+      ul { padding-left: 20px; }
+    </style>
+  </head>
+  <body>
+    <h1>Pi Browser Bridge</h1>
+    <p id="status">loading...</p>
+
+    <label>
+      WebSocket URL
+      <input id="wsUrl" type="text" />
+    </label>
+
+    <label>
+      Heartbeat(ms)
+      <input id="heartbeatMs" type="number" min="250" step="250" />
+    </label>
+
+    <button id="save">保存</button>
+
+    <h2>Tabs</h2>
+    <ul id="tabs"></ul>
+
+    <script src="./options.js"></script>
+  </body>
+</html>

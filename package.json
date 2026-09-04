@@ -1,0 +1,33 @@
+{
+  "name": "agent-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "browser-bridge-cli": "./cli/browser-bridge-cli.ts"
+  },
+  "scripts": {
+    "build": "npm run build:chrome",
+    "build:chrome": "node scripts/build-chrome.mjs",
+    "browser-bridge-cli": "node --import tsx ./cli/browser-bridge-cli.ts",
+    "lint": "eslint . --ext .ts,.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/**/*.test.ts"
+  },
+  "dependencies": {
+    "typebox": "^1.0.55",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.29",
+    "@types/node": "^24.3.0",
+    "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "esbuild": "^0.25.9",
+    "eslint": "^9.34.0",
+    "postject": "^1.0.0-alpha.6",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
